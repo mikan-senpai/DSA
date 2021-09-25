@@ -1,0 +1,31 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& numclass Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        
+        int s=0,e=0;
+        int currSum=nums[0];
+        int j=0;
+        while(j<nums.size())
+        {
+            if (currSum==target)
+            {
+                return s;
+                return e-1;
+            }
+            if (currSum>target)
+            {
+                currSum=currSum-nums[s];
+                s++;
+            }
+            else{
+                 currSum=currSum+nums[s];
+                 e++;
+            }
+            j++;
+            
+        }
+        
+    }
+};
