@@ -29,20 +29,53 @@ The number of nodes in the list is sz.
 //------------------------------------------------------------------------------------------------------------
 //---------------------------------------------CODE-----------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
-        
-        
-    }
-};
+    /**
+     * Definition for singly-linked list.
+     * struct ListNode {
+     *     int val;
+     *     ListNode *next;
+     *     ListNode() : val(0), next(nullptr) {}
+     *     ListNode(int x) : val(x), next(nullptr) {}
+     *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+     * };
+     */
+    class Solution {
+    public:
+        ListNode* removeNthFromEnd(ListNode* head, int n) {
+            ListNode* dummy=new ListNode;
+            dummy->next=NULL;
+            ListNode* fast=head;
+            ListNode* slow=head;
+            // int i = 1;
+            // do
+            // {
+            //     fast=fast->next;
+            //     i++;
+            // }
+
+
+            for (int i = 1; i < n; i++)
+            {
+                /* code */
+                fast=fast->next;
+            }
+
+
+
+            while(i<n);
+
+            while(fast->next!=NULL)
+            {
+                slow=slow->next;
+                fast=fast->next;
+            }
+
+            ListNode* freeing_node=slow->next;
+            slow->next=slow->next->next;
+            delete(freeing_node);
+
+
+            return dummy->next;
+            
+        }
+    };
