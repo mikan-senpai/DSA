@@ -1,7 +1,7 @@
 #include <iostream>
 
 
-#include "StackusingArray"
+#include "StackUsingArray.cpp"
 
 using namespace std;
 
