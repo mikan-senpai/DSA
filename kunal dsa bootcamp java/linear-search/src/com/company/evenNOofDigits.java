@@ -54,7 +54,7 @@ public class evenNOofDigits {
         return count;
     }
 
-//    optimized aproch of ggeting the number of digitsdd in a anumebr
+//    optimized aproch of geting the number of digitsdd in a anumebr
     static int digit2(int num)
     {
         if(num<0)

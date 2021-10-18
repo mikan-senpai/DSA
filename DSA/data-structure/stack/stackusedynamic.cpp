@@ -9,7 +9,7 @@
 
 int main()
 {
-    stackusingDynamicarray stack;
+    stackusingDynamicarray<int> stack;
     stack.push(129);
     stack.push(12);
     stack.push(1223);

@@ -1,23 +1,24 @@
 #include <iostream>
 #include <climits>
 using namespace std;
+template<typename T>
 
 class stackusingDynamicarray {
-	int *data;
+	T *data;
 	int nextIndex;
 	int capacity;
 
 	public :
 
 	stackusingDynamicarray(){
-		data=new int[4];
+		data=new T[4];
 		nextIndex=0;
 		capacity=4;
 
 	}
 
 	//return the number of elements present in my stack
-	int size()
+	T size()
 	{
 		return nextIndex;
 	}
@@ -36,7 +37,7 @@ class stackusingDynamicarray {
 	}
 
 	//insert an element in the stack
-	void push(int userdata)
+	void push(T userdata)
 	{
 
 		// if(nextIndex== capacity)
@@ -46,7 +47,7 @@ class stackusingDynamicarray {
             // here we dynamically allocate a new array with twice the sixe of the current array
             if(nextIndex == capacity)
             {
-                int *newdata= new int[2*capacity];
+                T *newdata= new T[2*capacity];
                 for(int i=0;i<capacity;i++)
                 {
                     newdata[i]=data[i];
@@ -63,22 +64,23 @@ class stackusingDynamicarray {
 	}
 
 	// deleting the last elem
-	int pop()
+	T pop()
 	{
 		if(isEmpty())
 		{
 			cout<<"stack is empty"<<endl;
-			return INT_MIN;
+
 		}
 		nextIndex--;
 		return data[nextIndex];
 	}
-	int top()
+	T top()
 	{
 		if (isEmpty())
 		{
 			/* code */
 			cout<<"stack is empty"<<endl;
+			return 0;
 		}
 		return data[nextIndex-1];
 	}
