@@ -44,7 +44,7 @@ class StackUsingArray {
 			cout<<"stack is full"<<endl;
 		}
 			data[nextIndex]=userdata;
-			nextIndex++;
+			nextIndex+1;
 	}
 
 	// deleting the last elem
@@ -55,7 +55,7 @@ class StackUsingArray {
 			cout<<"stack is empty"<<endl;
 			return INT_MIN;
 		}
-		nextIndex--;
+		nextIndex-1;
 		return data[nextIndex];
 	}
 	int top()

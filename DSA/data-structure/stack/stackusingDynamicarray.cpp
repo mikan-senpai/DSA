@@ -10,7 +10,8 @@ class stackusingDynamicarray {
 
 	public :
 
-	stackusingDynamicarray(){
+	stackusingDynamicarray()
+	{
 		data=new T[4];
 		nextIndex=0;
 		capacity=4;
