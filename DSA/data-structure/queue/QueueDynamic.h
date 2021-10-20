@@ -12,13 +12,13 @@ class QueueUsingArray{
 
     public:
 
-    QueueUsingArray(int totalsize)
+    QueueUsingArray()
     {
-        data = new T[totalsize];
+        data = new T[5];
         nextIndex = 0;
         firstIndex = -1;
         sizearray=0;
-        capacity=totalsize;
+        capacity=5;
 
     }
 
@@ -36,10 +36,28 @@ class QueueUsingArray{
     // to insert an element
     void enqueue(T userdata){   
 
+
         if( sizearray == capacity )
         {
-            cout<<"Queue Full !"<<endl; 
-            return;
+            int* newdata = new int[capacity*2];
+            int j = 0; 
+            for(int i = firstIndex ; i < capacity ; i++)
+            {
+                newdata[j] = data[i];
+                j++;
+            }   
+            for(int i=0 ; i < nextIndex;i++)
+            {
+                newdata[j] = data[i];
+                j++;
+            }
+            delete[] data;
+            data = newdata;
+
+            firstIndex = 0; 
+            nextIndex=capacity;
+            capacity =capacity*2;
+            
         }
 
         data[nextIndex] = userdata;
