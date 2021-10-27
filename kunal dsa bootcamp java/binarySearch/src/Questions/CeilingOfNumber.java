@@ -3,7 +3,7 @@ package Questions;
 public class CeilingOfNumber {
     public static void main(String[] args) {
         int[] arr={2,3,4,5,6,7,8,9,11,22,33};
-        int target=20;
+        int target=34 ;
 
         int ans=ceiling(arr, target);
         System.out.println(ans);
@@ -17,6 +17,10 @@ public class CeilingOfNumber {
         int end=arr.length-1;
         int middle;
 
+        if(target > arr[arr.length-1])
+        {
+            return -1;
+        }
 
         while(start<=end)
         {
@@ -38,7 +42,7 @@ public class CeilingOfNumber {
 //            System.out.println("no ceiling number present");
 //            return 0;
 //        }
-        return arr[end];
+        return arr[start];
     }
 
 }

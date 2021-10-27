@@ -32,6 +32,18 @@ class QueueUsingArray{
     {
         return sizearray==0;
     }
+
+
+
+    T front()
+    {
+        if(isEmpty())
+        {
+            cout<<"queue empty!"<<endl;
+            return 0;
+        }
+        return data[firstIndex];
+    }
     
     // to insert an element
     void enqueue(T userdata){   
@@ -75,15 +87,6 @@ class QueueUsingArray{
 
 
 
-    T front()
-    {
-        if(isEmpty())
-        {
-            cout<<"queue empty!"<<endl;
-            return 0;
-        }
-        return data[firstIndex];
-    }
 
 
 

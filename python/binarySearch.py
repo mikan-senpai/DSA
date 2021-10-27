@@ -20,7 +20,7 @@ def binarySearch(arr, target):
 #test array
 
 arr=[2,3,4,5,6,7]
-target =6
+target =22
 
 #function call
 result = binarySearch(arr,target)
