@@ -1,0 +1,106 @@
+DATE:26.10.2021
+========================================================
+FEATURES OF JAVA
+=========================================
+1.PLATFORM INDEPENDENT
+2.OBJECT ORIENTED PROGRAMMING
+3.MULTITHREADING
+4.DISTRIBUTED
+WHY JAVA IS PLATFORM INDEPENDENT?
+WHAT ARE MEMORY AREAS IN JVM?
+WHAT IS THE ROLE OF METHOD AREA AND HEAP AREA?
+DO YOU KNOW UML?WHAT IS THE USE OF UML?
+WHAT IS THE SUPER CLASS IN JAVA?
+THE SUPER CLASS IN JAVA IS OBJECT CLASS WHICH BELONGS TO java.lang.* PACKAGE
+EVERY CLASS IN JAVA IS A CHILD OF Object CLASS
+IS JAVA 100% OBJECT ORIENTED PROGRAMMING LANGUAGE?
+public class
+final class
+static class
+inner class
+Annonymous inner class
+Singleton class
+
+X.java
+=============================================
+COMPILE
+=================================
+javac X.java====>COMPILER====X.class(JAVA BYTE CODE)
+RUN
+========================
+java X====GOES TO JVM====OUTPUT
+
+JVM
+=======================================
+JAVA VIRTUAL MACHINE
+JVM ONLY EXECUTES COMPILED JAVA CLASSES
+ARCHITECTURE OF JVM
+============================================================================
+
+
+OBJECT ORIENTED PROGRAMMING(OOPS)
+==============================================================
+FEATURES
+======================================================
+1.ENCAPSULATION
+2.POLYMORPHISM
+    STATIC POLYMORPHISM
+    DYNAMIC POLYMORPHISM
+3.INHERITANCE
+   SINGLE INHERITANCE
+   MULTILEVEL INHERITANCE
+   HIERARCHICAL INHERITANCE
+4.ABSTRACTION
+5.DYNAMIC BINDING
+
+CLASS===CLASS IS A COLLECTION OF OBJECTS WITH COMMON PROPERTIES 
+        AND BEHAVIOUR
+    =====IT IS DEAD TEMPLATE
+
+OBJECT====OBJECT IS A REAL WORLD ENTITY
+
+FURNITURE    CHAIR    TABLE     BOOKSHELF
+========  =============================
+CLASS       OBJECT
+COMMON PROPERTIES
+===========================================
+LENGTH
+WIDTH===================VARIABLE
+HEIGHT
+COMMON BEHAVIOUR
+=======================================
+KEEPINGSOMETHING   =======METHOD
+
+ENCAPSULATION
+================================================================
+CROCIN650             PARACETAMOL
+==========           ============
+OBJECT                CLASS
+BINDING OF DATA AND METHOD TOGETHER
+DATA HIDDING
+
+UML
+=========================
+UNIFIED MEDELLING LANGUAGE
+PURPOSE
+=====================
+TO DRAW THE CLASS DIAGRAM
+IDE
+=======================================
+INTEGRATED DEVELOPMENT ENVIRONMENT
+=====================================
+ECLIPSE
+NETBEANS
+INTELIJEE
+STS
+
+CLASS
+=============================================
+public class
+final class
+static class
+inner class
+Annonymous inner class
+Singleton class
+
+
