@@ -1,4 +1,4 @@
-package com.company;
+package com.algo;
 
 import java.util.Arrays;
 
