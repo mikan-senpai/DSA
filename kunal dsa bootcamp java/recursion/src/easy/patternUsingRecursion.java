@@ -1,3 +1,5 @@
+package easy;
+
 public class patternUsingRecursion {
     public static void main(String[] args) {
         triangle1(4,0);
