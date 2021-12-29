@@ -5,7 +5,7 @@ github-> tokens
 projects token:
 {
 access type :	all
-token:		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
-			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
-			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
+token:	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
+		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
+		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
 }
