@@ -98,7 +98,7 @@ public class Maze {
 			pathResistance(p + "R", maze,row, col + 1);
 		}
 	}
-
+		
 
 
 
