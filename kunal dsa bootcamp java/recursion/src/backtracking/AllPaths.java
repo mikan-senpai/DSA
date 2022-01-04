@@ -13,7 +13,7 @@ public class AllPaths {
 
 
         int [][]path= new int[board.length][board[0].length];
-        AllPath("",board,0,0,path,0);
+        AllPath("",board,0,0,path,1);
 
     }
 
@@ -53,7 +53,7 @@ public class AllPaths {
     }
 
 
-
+// all  the path are considered 
     static void AllPath(String p, boolean[][] maze, int row,int col, int[][] path, int step){
 
         if(row == maze.length-1 && col == maze[0].length-1){
