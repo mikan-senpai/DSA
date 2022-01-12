@@ -1,4 +1,4 @@
- package com.mikan;
+ package com.mikan.introduction;
 
 
  public class Main {
