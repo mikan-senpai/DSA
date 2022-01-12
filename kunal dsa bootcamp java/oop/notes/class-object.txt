@@ -16,9 +16,47 @@ The behavior of an object is the effect of data-type operations.
 
 ----------------------------------------------------------------------------
 
+***
+    Instance variables ->   are non-static variables and are declared in a class outside any method, constructor, or block.
+    As instance variables are declared in a class -> these variables are created when an object of the class is created and destroyed when the object is destroyed
 
-Instance variables ->   are non-static variables and are declared in a class outside any method, constructor, or block. As instance variables are declared in a class, these variables are created when an object of the class is created and destroyed when the object is destroyed
+
+    The dot operator links the name of the object with the name of an instance variable.
+Although commonly referred to as the dot operator, the formal specification for Java categorizes the "." as a separator.
+
+-------------------------------------------------------------------------------------
+*NEW    ===>    'new' keyword dynamically allocates (that is, allocates at run time) memory for an object & returns a reference to it.
+    This reference is, more or less, the address in memory of the object allocated by new.
+    This reference is then stored in the variable.
+    Thus, in Java, all class objects must be dynamically allocated.
+-----------------------------------------------------------------------------------
+*CONSTRUCTOR=======>
+                    1.  In Java, a constructor is a block of codes similar to the method. It is called when an instance of the class is created.
+                        At the time of calling constructor,memory for the object is allocated in the memory.
+
+                    2.  It is a special type of method which is used to initialize the object.
+
+                    3.  Every time an object is created using the new() keyword, at least one constructor is called.
+------------------------------------------------------------------------------------------
+
+Why dont we use the new keyword in java for making the primitive datatypes?
+=>  in java the primitive datatypes are not implemented as objects (objects
+    are stored in the heap memory), hence they are stored in the stack memory only.
+    why do we do it -> to increase efficency (faster than putting an oject in heap
+    memory and returning the referenceto it )
 
 
-The dot operator links the name of the object with the name of an instance variable.
-Although commonly referred to as the dot operator, the formal specification for Java categorizes the . as a separator.
+
+*** ---------------------------GARBAGE COLLECTION-------------------------------***
+1.  Garbage Collection is process of reclaiming the runtime unused memory
+    automatically. In other words, it is a way to destroy the unused objects.
+
+
+2.  we have destructors  => free() function in C language and delete() in C++.
+    But,in java it is performed automatically. So, java provides better memory
+    management.
+
+3.  but sometimes garbage collection you need to perform some kind of action
+    to handle such situations . In java, we have "finalization" .
+    you can specify what to do when the object is destroyed manually.
+    but you cannot destroy the object manually!

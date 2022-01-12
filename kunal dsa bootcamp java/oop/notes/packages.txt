@@ -1,0 +1,2 @@
+************************PACKAGES**************************
+Packages are containers for classes. They are used to keep the class name space compartmentalized.
