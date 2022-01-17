@@ -1,0 +1,32 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+
+# make prompt a single line instead of two lines
+#i[line_break]
+#disabled = true
+
+
+# Replaces the default "❯" symbol in the prompt with "➜"
+[character]                             # The name of the module we are configuring is "character"
+success_symbol = "[─▶](bold green)"      # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[✗](bold red) "                 #With custom error shape
+
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+
+# Use custom format
+#format = """
+#[┌───────────────────>](bold green)
+#[│](bold green)$directory$rust$package
+#[└─>](bold green) """
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+#scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+

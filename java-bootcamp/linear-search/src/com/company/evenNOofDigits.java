@@ -62,7 +62,7 @@ public class evenNOofDigits {
             num*=-1;
         }
         return (int)Math.log10(num)+1; //for any decimal number
-        return (int)Math.l(num)+1;
+//        return (int)Math.log(num)+1;
     }
 
 

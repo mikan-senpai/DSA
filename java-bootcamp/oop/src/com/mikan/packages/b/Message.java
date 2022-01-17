@@ -6,6 +6,6 @@ public class Message {
     }
 
     public static void message() {
-        System.out.println("hey");
+        System.out.println("heyee");
     }
 }
