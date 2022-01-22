@@ -1,0 +1,15 @@
+
+
+
+Static member inside a non-Static
+       when you put stuff inside a static context
+        -> make sure you are creating an object for it
+
+
+       and if you are not putting inside any static stuff
+       -> then you can call it directly cause in the end and object for this will be created 100%
+       because everything goes inside main only in the end
+
+
+
+
