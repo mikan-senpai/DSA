@@ -16,5 +16,8 @@ public class Main {
         square1.area();
 
 
+        Shapes circle2 = new Circle();
+        circle2.area();
+
     }
 }

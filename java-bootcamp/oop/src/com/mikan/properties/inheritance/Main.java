@@ -48,5 +48,13 @@ public class Main {
         System.out.println(green.w + " " + green.weight + " " + green.color);
 
 
+
+        Box box10 = new Box();
+        box10.greeting();
+
+
+        Box box= new BoxWeight();
+        box.greeting();
+
     }
 }
