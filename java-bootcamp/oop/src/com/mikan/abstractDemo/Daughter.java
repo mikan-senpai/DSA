@@ -4,10 +4,9 @@
 package com.mikan.abstractDemo;
 
 public class Daughter extends Parent{
-    int age;
 
     public Daughter(int age) {
-        this.age = age;
+        super(age);
     }
 
     @Override
