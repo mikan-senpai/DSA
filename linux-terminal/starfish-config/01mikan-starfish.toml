@@ -1,0 +1,45 @@
+  1 # command_timeout = 1000
+  2 add_newline = false
+  3 # format = """
+  4 # [╭─](white)$username$hostname in $directory$package$java$python$git_branch$cmd_duration
+  5 # [╰─](white)$character """
+  6 
+  7 # [│](white)  $golang$rust$java$python$custom$env_var
+  8 format = """
+  9 $battery
+ 10 [╭─](blue)\
+ 11     [【](#f06431 bold)\
+ 12       $username\
+ 13       [@](#f79a32 bold)\
+ 14       $hostname \
+ 15       $directory\
+ 16       $git_branch\
+ 17       $git_commit\
+ 18       $git_state\
+ 19       $git_status\
+ 20       $hg_branch\
+ 21       $package$jobs\
+ 22     [】](#f06431 bold)
+ 23 [│](blue)  \
+ 24     $status\
+ 25     $cmd_duration\
+ 26     $memory_usage\
+ 27     $shlvl\
+ 28     $golang\
+ 29     $rust\
+ 30     $lua\
+ 31     $python\
+ 32     $custom\
+ 33     $env_var
+ 34 [╰─](blue)\
+ 35     $time\
+ 36     $character
+ 37 """
+ 38 # Replace the "❯" symbol in the prompt with "➜"
+ 39 [character]                            # The name of the module we are configuring is "character"
+ 40 success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the co    lor "bold green"
+ 41 error_symbol = "[✗](bold red) "                 #With custom error shape
+ 42 
+ 43 
+ 44 
+

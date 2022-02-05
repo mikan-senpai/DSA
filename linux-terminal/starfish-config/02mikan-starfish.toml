@@ -1,0 +1,69 @@
+command_timeout = 1000
+add_newline = false
+format = """
+[╭─](yellow)$username$hostname in $directory$package$java$python$git_branch$cmd_duration
+[╰─](yellow)$character """
+
+
+# Replaces the default "❯" symbol in the prompt with "➜"
+[character]                             # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)"      # The "success_symbol" segment is being set to "─▶" with the color "bold green"
+error_symbol = "[✗](bold red) "                 #With custom error shape
+
+
+
+
+
+
+
+[hg_branch]
+disabled = false
+symbol = " "
+style = "green"
+# truncation_length = 8 # default = 2^63 - 1
+# truncation_symbol = "…"
+format = "[$symbol$branch]($style)"
+
+
+
+[git_status]
+# disabled = true
+style = "blue"
+stashed = " \\(${count}\\) "
+ahead = "ﲗ ${count}"
+behind = "ﲔ ${count}"
+diverged = "李 ${ahead_count} ${behind_count}"
+conflicted = "${count}"
+deleted = " [✘${count}](red bold)" # 
+renamed = "﫦${count}"
+modified = "[  \\(${count}\\) ](yellow bold)"
+# staged = '[++$count](green)'
+staged = " [ ${count}](green)"
+untracked = "  \\(${count}\\)"
+format = "([$all_status$ahead_behind]($style)) "
+# $stashed$staged$modified$renamed$untracked$deleted$conflicted$ahead_behind
+
+[git_branch]
+symbol = "🚀"
+# symbol = "    "
+style = "green"
+# truncation_length = 4
+# truncation_symbol = ""
+format = "[$symbol$branch]($style)"
+
+[git_commit]
+style = "red"
+commit_hash_length = 4
+# only_detached = true
+format = "[#$hash]($style)"
+
+[git_state]
+style = "bg:#E0B25D fg:111111"
+rebase = "rebasing"
+merge = "merging"
+revert = "reverting"
+cherry_pick = " picking"
+bisect = "bisecting"
+am = "am'ing"
+am_or_rebase = "am/rebase"
+format = '\([$state($progress_current/$progress_total)]($style)\)'
