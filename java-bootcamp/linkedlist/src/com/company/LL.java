@@ -54,6 +54,22 @@ public class LL {
         temp.next=node;
         size+=1;
     }
+//=========================================
+    //INSERT USING RECURSION
+    public void insertRec(int val , int index){
+        head= insertRec(val, index, head);
+    }
+    private Node insertRec(int userData, int index , Node node ){
+        if(index == 0 ){
+            Node temp = new Node(userData, node);
+            size+=1;
+            return temp ;
+        }
+        node.next =insertRec(userData, index -1, node.next);
+        return node;
+    }
+//=========================================
+
 
     public int deleteFirst(){
         if(head == null) {
@@ -67,7 +83,7 @@ public class LL {
 
     public int deleteLast(){
         if (size <= 1){
-             return deleteFirst();
+             return deleteFirst();z
         }
         Node secondLast= get(size-2);
         int val = tail.value;
