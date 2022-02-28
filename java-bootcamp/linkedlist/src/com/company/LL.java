@@ -83,7 +83,7 @@ public class LL {
 
     public int deleteLast(){
         if (size <= 1){
-             return deleteFirst();z
+             return deleteFirst();
         }
         Node secondLast= get(size-2);
         int val = tail.value;
@@ -150,5 +150,104 @@ public class LL {
             this.next = next;
         }
     }
+//    ========================================================
+//    *******************LEETCODE QUESTIONS*******************
+    public void duplicates(){
+        Node node = head;
+
+        while(node.next != null){
+            if(node.value == node.next.value){
+                node.next=node.next.next;
+                size--;
+            }
+            node= node.next;
+        }
+        tail = node;
+        tail.next= null;
+    }
+
+    //    ========================================================
+    public LL mergeSorted(LL first , LL second){
+        Node f= first.head;
+        Node s= first.head;
+        LL ans = new LL();
+        while(f != null && s != null ){
+            if(f.value < s.value){
+                ans.insertLast(f.value);
+                f=f.next;
+            }else{
+                ans.insertLast(s.value);
+                s=s.next;
+            }
+        }
+        while(f != null){
+            ans.insertLast(f.value);
+            f=f.next;
+        }
+        while(s != null) {
+            ans.insertLast(s.value);
+            s=s.next;
+        }
+        return ans;
+    }
+
+
+////    -----------------mikan solution ------------------------
+//public LL mergeTwoLists(LL l1, LL l2) {
+//
+//    LL dummy = new LL();
+//    LL tail = dummy;
+//
+//    while(l1 != null && l2 != null){
+//        if(l1.val < l2.val){
+//            tail.next = l1;
+//            l1=l1.next;
+//        }else{
+//            tail.next = l2;
+//            l2=l2.next;
+//        }
+//        tail = tail.next;
+//    }
+//    if(l1 != null ){
+//        tail.next = l1;
+//    }
+//    else if(l2 != null ){
+//        tail.next = l2;
+//    }
+//    return dummy.next;
+//}
+//    ========================================================
+
+    /**
+     * Definition for singly-linked list.
+     * class ListNode {
+     *     int val;
+     *     ListNode next;
+     *     ListNode(int x) {
+     *         val = x;
+     *         next = null;
+     *     }
+     * }
+     */
+
+        public boolean hasCycle(LL head) {
+            LL fast = head ;
+            LL slow = head ;
+            while(fast != null && fast.next  != null )
+            {
+                fast = fast.next.next;
+                slow = slow.next;
+
+
+                if(fast == slow) {return true;}
+            }
+            return false;
+        }
+
+
+
+
+
+
 
 }
