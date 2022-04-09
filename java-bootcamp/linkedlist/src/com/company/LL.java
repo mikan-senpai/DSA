@@ -129,7 +129,7 @@ public class LL {
     }else {
         Node temp = head;
         while(temp != null){
-            System.out.print(temp.value + " -➜ ");
+            System.out.print(temp.value + " -> ");
             temp=temp.next;
         }
         System.out.print("END");
@@ -230,19 +230,19 @@ public class LL {
      * }
      */
 
-        public boolean hasCycle(LL head) {
-            LL fast = head ;
-            LL slow = head ;
-            while(fast != null && fast.next  != null )
-            {
-                fast = fast.next.next;
-                slow = slow.next;
-
-
-                if(fast == slow) {return true;}
-            }
-            return false;
-        }
+//        public boolean hasCycle(LL head) {
+//            LL fast = head ;
+//            LL slow = head ;
+//            while(fast != null && fast.next  != null )
+//            {
+//                fast = fast.next.next;
+//                slow = slow.next;
+//
+//
+//                if(fast == slow) {return true;}
+//            }
+//            return false;
+//        }
 
 
 
