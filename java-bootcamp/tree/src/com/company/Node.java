@@ -16,12 +16,17 @@ package com.company;
  * }
  */
 public class Node {
-    int data;
+    int val;
     Node left;
     Node right;
 
     public Node(int userData) {
-        data = userData;
+        val = userData;
+    }
+    Node(int val, Node left, Node right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }
 

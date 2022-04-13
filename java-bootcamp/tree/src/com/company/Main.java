@@ -1,4 +1,9 @@
 package com.company;
+
+import java.util.*;
+
+import static com.company.Traversal.levelOrder;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,12 +16,20 @@ public class Main {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
 
+/*
         Traversal.inorder(root);
         System.out.println();
         Traversal.preorder(root);
         System.out.println();
         Traversal.postorder(root);
+*/
+        List<List<Integer>> ans = Traversal.levelOrder(root);
+
+
+//        System.out.println(ans);
+        System.out.println(Traversal.IterativePreorder(root));
     }
+
 
 }
 
