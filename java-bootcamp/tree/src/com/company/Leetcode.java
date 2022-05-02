@@ -61,7 +61,52 @@ public class Leetcode {
         postorderFUN(postorder, root);
         return postorder;
     }
+
+    //    https://leetcode.com/problems/maximum-depth-of-binary-tree/
+    public int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+        return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+    }
+
+    /* same but striver code */
+    public int maxDepthTUF(TreeNode root) {
+        if (root == null) return 0;
+        int leftHeight = maxDepthTUF(root.left);
+        int rightHeight = maxDepthTUF(root.right);
+
+        return 1 + Math.max(leftHeight, rightHeight);
+    }
+
+
+    //    https://leetcode.com/problems/balanced-binary-tree/
+    public boolean isBalanced(TreeNode root) {
+        return dfsheight (root) != -1;
+    }
+
+    public int dfsheight(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftHeight = dfsheight(root.left);
+        if (leftHeight == -1) {
+            return -1;
+        }
+        int rightHeight = dfsheight(root.right);
+        if (rightHeight == -1) {
+            return -1;
+        }
+        if (Math.abs(leftHeight - rightHeight) > 1) {
+            return -1;
+        }
+        return 1 + Math.max(leftHeight, rightHeight);
+    }
 }
+
+
+
+
+
+
 /*
   Definition for a binary tree node.
   public class TreeNode {

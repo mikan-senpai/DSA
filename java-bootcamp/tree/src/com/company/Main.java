@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.*;
 
-import static com.company.Traversal.levelOrder;
+//import static com.company.Traversal.levelOrder;
 
 public class Main {
 
@@ -23,12 +23,14 @@ public class Main {
         System.out.println();
         Traversal.postorder(root);
 */
-        List<List<Integer>> ans = Traversal.levelOrder(root);
+//        List<List<Integer>> ans = Traversal.levelOrder(root);
 
 
 //        System.out.println(ans);
-        System.out.println(Traversal.IterativePreorder(root));
+//        System.out.println(Traversal.IterativePreorder(root));
+        System.out.println(Traversal.IterativeInorder(root));
     }
+
 
 
 }

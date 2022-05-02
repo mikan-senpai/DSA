@@ -53,9 +53,27 @@ public class Traversal {
     }
 
 
+    public static ArrayList <Integer> IterativeInorder(Node node) {
+        ArrayList <Integer> list = new ArrayList<>();
+        Stack<Node> st = new Stack<>();
+        if (node == null) return list;
+        while (true) {
+            if (node != null) {
+                st.push(node);
+                node = node.left;
+            } else {
+                if (st.isEmpty()) break;
+                node = st.pop();
+                list.add(node.val);
+                node = node.right;
+            }
+        }
+        return list;
+    }
+
+
     public static List<List<Integer>> BFS(Node node) {
-        List<List<Integer>> ans = Traversal.levelOrder(node);
-        return ans;
+        return Traversal.levelOrder(node);
     }
 
     public static List<List<Integer>> levelOrder(Node root) {
