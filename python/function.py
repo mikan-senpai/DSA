@@ -85,5 +85,7 @@ fruits = ["apple", "banana", "cherry"]
 
 my_function(fruits)
 
-
+def thismyname(name):
+    for int i in name:
+            print(i+" ")
 

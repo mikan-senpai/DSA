@@ -1,13 +1,13 @@
-#	CREATING A CLASS
+# #	CREATING A CLASS
 
-class Myclass:
-	x=5
+# class Myclass:
+# 	x=5
 
 
-# 	CREATING A OBJECT
+# # 	CREATING A OBJECT
 
-p1 = Myclass()
-print(p1.x)
+# p1 = Myclass()
+# print(p1.x)
 
 
 '''
@@ -27,13 +27,20 @@ class Person:
     def __init__(self,name,age):
         self.name = name
         self.age=age
+    
+    def ageafter5(self):
+        print(self.age+5)
+
+
+
 
 p1= Person("John",36)
 
 print(p1.name)
 print(p1.age)
+p1.ageafter5();
 
-iprint("hey this is mikan")
+print("hey this is mikan")
 
 
 
